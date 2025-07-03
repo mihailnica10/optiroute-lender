@@ -10,6 +10,7 @@
 		"deploy": "astro build && wrangler pages deploy",
 		"cf-typegen": "wrangler types"
 	},
+	
 	"dependencies": {
 		"@astrojs/cloudflare": "^12.6.0",
 		"astro": "^5.11.0"
