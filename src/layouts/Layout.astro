@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>optiroute</title>
+	</head>
+	<body>
+		<div class="background-overlay"></div>
+		<slot />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100vw;
+		height: 100vh;
+	}
+	body {
+		min-height: 100vh;
+		background: url('/f2v7ztxdq1x01.jpg') no-repeat center center fixed;
+		background-size: cover;
+		overflow-x: hidden;
+	}
+	.background-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: rgba(88, 88, 88, 0.4);
+		pointer-events: none;
+		z-index: 0;
+	}
+	body > *:not(.background-overlay) {
+		position: relative;
+		z-index: 2;
+	}
+</style>
